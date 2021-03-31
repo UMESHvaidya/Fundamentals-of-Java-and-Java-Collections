@@ -5,14 +5,14 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class ArrayList_Operations {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         //Creating an object of class Scanner
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();//Taking number of testcases
         while(T>0)
         {
-            ArrayList<Integer> A = new ArrayList<Integer>();//Declaraing and Initializing an ArrayList
+            ArrayList<Integer> A = new ArrayList<>();//Declaraing and Initializing an ArrayList
             int q = sc.nextInt();//Taking number of queries
 
             while(q>0)
@@ -47,7 +47,7 @@ public class ArrayList_Operations {
     }
     public static void add_to_ArrayList(ArrayList<Integer> A, int x)
     {
-        A.add((Integer) x);
+        A.add(x);
     }
 
     public static void sort_ArrayList_Asc(ArrayList<Integer> A)
@@ -67,7 +67,7 @@ public class ArrayList_Operations {
 
     public static void sort_ArrayList_Desc(ArrayList<Integer> A)
     {
-        Collections.sort(A, Collections.reverseOrder());
+        A.sort(Collections.reverseOrder());
     }
 
     public static void print_ArrayList(ArrayList<Integer> A)
