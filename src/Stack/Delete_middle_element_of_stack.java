@@ -7,7 +7,6 @@ public class Delete_middle_element_of_stack {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-
         while (t-- > 0) {
             int sizeOfStack = sc.nextInt();
             Stack<Integer> myStack = new Stack<>();
