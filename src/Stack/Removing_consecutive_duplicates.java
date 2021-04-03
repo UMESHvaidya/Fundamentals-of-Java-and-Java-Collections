@@ -32,5 +32,6 @@ public class Removing_consecutive_duplicates {
                 ans.append(c);
             }
         return ans.toString();
+            // return the string
     }
 }
