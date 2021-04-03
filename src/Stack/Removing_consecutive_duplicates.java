@@ -23,6 +23,9 @@ public class Removing_consecutive_duplicates {
         StringBuilder ans = new StringBuilder();
         Stack<Character> stack = new Stack<>();
         stack.push(str.charAt(0)); ans.append(stack.peek());
+        //iterate over elements in the string
+        // maintain a stack check every char with stack top if it matches
+        // means already present in the string
         for(char c:str.toCharArray())
             if(stack.peek()!=c) {
                 stack.push(c);
