@@ -13,7 +13,6 @@ public class Operation_On_Stack {
         {
             // Declaring stack of integers
             Stack<Integer> st = new Stack<>();
-
             int q = sc.nextInt();
 
             // Working with queries
