@@ -1,6 +1,8 @@
 package Stack;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.Scanner;
 
 public class Parenthesis_Checker {
@@ -28,25 +30,17 @@ public class Parenthesis_Checker {
     }
     public static boolean ispar(String x)
     {
-        char arr []  = new char[x.length()];int index = 0;
-        for(char a:x.toCharArray()) {
-            if ("({[".contains(a + "")){
-                arr[index++] = a;
-                System.out.println(Arrays.toString(arr));
-        }
-            else {
-                if (index == 0)
-                    return false;
-                if (a == ')' && arr[index - 1] != '(') return false;
-                if (a == ']' && arr[index - 1] != '[') return false;
-                if (a == '}' && arr[index - 1] != '{') return false;
-                else {
-                    arr[index - 1] = 0;
-                    index --;
-                }
+        Deque<Character> stack = new ArrayDeque<>();
+        for(Character a:x.toCharArray()){
+            if ("({[".contains(a+""))
+                stack.push(a);
+            else{
+                if (stack.isEmpty()) return false;
+                if (a ==')' && stack.pop()!='(') return false;
+                if (a ==']' && stack.pop()!='[') return false;
+                if (a =='}' && stack.pop()!='{') return false;
             }
         }
-        System.out.println(Arrays.toString(arr));
-        return index == 0;
+        return stack.isEmpty();
     }
 }
